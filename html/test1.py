@@ -1,19 +1,16 @@
 import numpy as np
-import math  
 
-distanciaEntreAsientos = 33
-M=12
+distanciaEntreAsientos = 100
+M=10
 N=10
-sanaDistancia = 153
+sanaDistancia = 250
 intervalo = int( sanaDistancia / distanciaEntreAsientos)
 # res = np.matrix([ [ " " for i in range(M) ] for j in range(N) ])
-res = np.full([M,N],'x')
+res = np.full([M,N],' ')
 j = 0
 i = 0
 counter = 0
 while(j < N):
-    if (j == 0):
-        res[intervalo, j] = 'x'
     while(i < M):
         res[i,j] = 'O'
         counter += 1
