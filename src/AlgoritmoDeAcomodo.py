@@ -1,21 +1,21 @@
 import numpy as np
 import math  
 
-distanciaEntreAsientos = 35
-M=15
-N=15
+distanciaEntreAsientos = 25
+longitud=18
+rango=18
 sanaDistancia = 150
-res = np.matrix([ [ "O" for i in range(M) ] for j in range(N) ])
-for j in range(M):
-    for i in range(N):
+res = np.matrix([ [ "O" for i in range(rango) ] for j in range(longitud) ])
+for j in range(rango):
+    for i in range(longitud):
         if(res[j, i]=="O"):
-            for y in range(M):
-                for x in range(N):   
+            for y in range(rango):
+                for x in range(longitud):   
                     if(y==j and x==i):
                         continue
                     val = ((y-j)**2+(x-i)**2)**.5 *distanciaEntreAsientos
                     if val<sanaDistancia:
-                        res[y, x]="X"
+                        res[y, x]=" "
 
 print(res)
                     
