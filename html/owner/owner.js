@@ -38,5 +38,5 @@ function draw() {
 }
 
 function animate_redirect() {
-    window.location.replace("./animation/animation.html")
+    window.location.replace("./animationA/animationA.html")
 }
