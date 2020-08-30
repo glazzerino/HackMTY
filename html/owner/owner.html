@@ -33,14 +33,12 @@
                 <br>
                 <label for="safe_distance">Minimum Safe Distance (cm)</label>
                 <textarea id="safe_distance" name="safe_distance" rows="1" cols="4" maxlength="500" resize="none"></textarea>
+                
                 <br>
-                <label for="percentage" >Percentage of Attendees</label>
-                <textarea id="percentage" name= "percentage" rows="1" cols="4" maxlength="500" resize="none"> </textarea>
-                <br>
-                <label for="seat_distance" >Distance between seats (cm)</label>
+                <label for="seat_distance" >Distance between seats' centers (cm)</label>
                 <textarea id="seat_distance" name= "seat_distance" rows="1" cols="4" maxlength="500" resize="none"> </textarea>
                 <br>
-                <button type="button" class="btn btn-dark" onclick="draw() unityInstance.SendMessage('SpawnPersons', setSize(), Width, 0, Height)" >Display</button>
+                <button type="button" class="btn btn-dark" onclick="draw(); unityInstance.SendMessage('SpawnPersons', setSize(), Width, 0, Height)" >Display</button>
                 <br>
                 
                 
