@@ -20,23 +20,18 @@ public class SimulationBehavior : MonoBehaviour
         exitTag = GameObject.FindGameObjectsWithTag("Exit");
         personTag = GameObject.FindGameObjectsWithTag("Person");
         navAgent = this.GetComponent<NavMeshAgent>();
-        //dataScript = GetComponent<>();
     }
 
     void Update()
     {
         FindPerson();
         Debug.DrawLine(transform.position, person.transform.position, Color.red);
-        //Debug.Log(closestPerson / 3);
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            FindExit();
-        }
-        if(navAgent.SetDestination(exit.transform.position) == true)
+        FindExit();
+
+        if(Input.GetKeyDown(KeyCode.E) && navAgent.SetDestination(exit.transform.position) == true)
         {
             MoveToExit();
         }
-        
     }
 
     public GameObject FindExit()
@@ -71,12 +66,12 @@ public class SimulationBehavior : MonoBehaviour
             navAgent.isStopped = false;
         }
 
-        float dist = Vector3.Distance(exit.transform.position, transform.position);
-        Debug.Log(dist);
-        if(dist < 0.4f)
+        float dist = Vector3.Distance(transform.position, exit.transform.position);
+        if (dist < 0.6f)
         {
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
+        
     }
 
     GameObject FindPerson()

@@ -7,7 +7,10 @@ public class SpawnPersons : MonoBehaviour
     public GameObject personPrefaf, armchairPrefaf;
     private GameObject decoyPrefaf;
     public Vector3 center;
-    public Vector3 size;
+    public Vector3 size = new Vector3(16, 0, 16);
+    public int numPer = 0;
+    public int percentage = 0;
+    
    
     void Start()
     {
@@ -24,9 +27,11 @@ public class SpawnPersons : MonoBehaviour
         }
     }
 
-    void SetValues(int x, int y, int z)
+    void SetValues(int x, int y, int z, int numP, int percent)
     {
         size.Set(x, y, z);
+        numPer = numP;
+        percentage = percent;
     }
 
     public void SpawnPerson()
