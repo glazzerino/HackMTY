@@ -40,7 +40,7 @@ public class SpawnPersons : MonoBehaviour
         for(float i = (-size.x/2) + 1; i <= size.x/2; i++)
         {
             Vector3 pos = center + new Vector3(i, 0, 0);
-            //armchairPrefaf.transform.localScale.z = armchairPrefaf.transform.localScale.z * size.z;
+            armchairPrefaf.transform.localScale = new Vector3(0.3f, 0.5f, size.z);
             Instantiate(armchairPrefaf, pos, Quaternion.identity);
         }
     }
