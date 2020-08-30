@@ -7,3 +7,7 @@ function goBack() {
 function goHome() {
     window.location.replace("../../../index.html")
 }
+
+function goTicket() {
+    window.location.replace("./ticket/ticket.html")
+}

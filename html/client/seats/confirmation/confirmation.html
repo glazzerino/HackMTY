@@ -9,7 +9,13 @@
     <link rel= "stylesheet" type="text/css" href="confirmation.css">
 </head>
 <body>
-        <strong>Here you will confirm by inserting your data:</strong>
+
+        <div class="alert alert-info" role="alert" style="width: 420px;">
+        <strong>Heads up!</strong> Here you will confirm by inserting your data:
+        </div>
+
+
+        
         <div>
         <label for="username">Username:</label>
         <input type="text" id="username" style="width: 220px;" placeholder="Insert Username" name="username">
@@ -19,7 +25,7 @@
         <input type="password"  id="pass" name="password" style="width: 220px;" placeholder="Insert password" minlength="8" required>
         </div>
         </div>
-        <button type="button" onclick="confirm_redirect()" >Confirm</button>
+        <button type="button" onclick="goTicket()" >Confirm</button>
         <button type="button" onclick="goBack()">Back to Grid</button>
         <button type="button" onclick="goHome()">Back to Home</button>
         

@@ -1,9 +1,6 @@
-
-function draw() {
-    var h_config = document.getElementById("h_config");
-    var w_config = document.getElementById("w_config");
-    var w = w_config.value;
-    var h = h_config.value;
+var table = new Object;
+function draw(w,h,matrix) {
+    
     var container = document.getElementById("container");
     container.innerHTML="";
     // console.log(h)
@@ -37,4 +34,24 @@ function draw() {
 
 function confirm_redirect() {
     window.location.replace("./confirmation/confirmation.html")
+}
+
+
+function readFile(input) {
+    console.log("dwad")
+    let file = input.files[0];
+
+    let reader = new FileReader();
+
+    reader.readAsText(file);
+
+    reader.onload = function() {
+        console.log(reader.result);
+
+    };
+
+    reader.onerror = function() {
+        console.log(reader.error);
+    };
+    table = JSON.parse(reader.result);
 }

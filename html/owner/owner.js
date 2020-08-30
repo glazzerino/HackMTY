@@ -1,4 +1,5 @@
 var fs = require("fs");
+
 function draw() {
     var h_config = document.getElementById("h_config");
     var w_config = document.getElementById("w_config");
@@ -39,14 +40,17 @@ function draw() {
             square.id = row +"_"+ column;
             square.style.border="none";
             newrow.appendChild(square);
-           
+
         }
         container.appendChild(newrow);
+        
     }
-
-    
-
-    
+    // should only have ONE obj
+    var save = {
+        dimensions: [w,h],
+        matrix: mat,
+    }
+    download("save.json", JSON.stringify(save));
     console.log(mat);
     for (var j=0;j<h; j++) {
         for (var i=0; i<w; i++) {
@@ -73,4 +77,17 @@ function draw() {
 
 function animate_redirect() {
     window.location.replace("./animationA/animationA.html")
+}
+
+function download(filename, text) {
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', filename);
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
 }
