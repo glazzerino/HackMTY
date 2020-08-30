@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 
+<<<<<<< HEAD
 <video autoplay muted loop id="myVideo">
   <source src="videosq.mp4" type="video/mp4">
 </video>
@@ -12,6 +13,49 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel= "stylesheet" type="text/css" href="style.css">
+=======
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel= "stylesheet" type="text/css" href="style.css">
+    
+    <h1>Space Planner</h1>
+</head>
+
+<body>
+    <strong>Log in as:</strong>
+    <script src="index.js"></script>
+    <div class="main">
+    </div>
+
+    <div class="custom-control custom-radio">
+    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+    <label class="custom-control-label" for="customRadio1">Owner</label>
+    </div>
+    <div class="custom-control custom-radio">
+    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+    <label class="custom-control-label" for="customRadio2">Client</label>
+    </div>
+
+
+    <form>
+    <div class="form-group">
+        <label for="formGroupExampleInput">Username</label>
+        <input type="text" class="form-control" style="width: 220px;" id="formGroupExampleInput" placeholder="Example input">
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Password</label>
+        <input type="password"  id="pass" name="password" style="width: 220px;" placeholder="Another input" minlength="8" required>
+    </div>
+    </form>
+
+       <button type="button" class="btn btn-success" onClick="userType_redirect('customradio1');" >Submit</button>
+>>>>>>> 3bd7b8915938698f64bfe62d27662e5c08171a99
         
         <h1>Space Planner</h1>
     </head>
