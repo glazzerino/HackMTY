@@ -10,25 +10,36 @@ public class SimulationBehavior : MonoBehaviour
     private GameObject person;
     private GameObject[] exitTag;
     private GameObject[] personTag;
-    public float socialDistance;
+    private float closestPerson = Mathf.Infinity;
+
+    public float socialDistancing;
+    InputData dataScript;
 
     void Start()
     {
         exitTag = GameObject.FindGameObjectsWithTag("Exit");
         personTag = GameObject.FindGameObjectsWithTag("Person");
         navAgent = this.GetComponent<NavMeshAgent>();
+        //dataScript = GetComponent<>();
     }
 
     void Update()
     {
         FindPerson();
-        if(Input.GetKeyDown(KeyCode.E))
+        Debug.DrawLine(transform.position, person.transform.position, Color.red);
+        //Debug.Log(closestPerson / 3);
+        if (Input.GetKeyDown(KeyCode.E))
         {
             FindExit();
         }
+        if(navAgent.SetDestination(exit.transform.position) == true)
+        {
+            MoveToExit();
+        }
+        
     }
 
-    GameObject FindExit()
+    public GameObject FindExit()
     {
         Vector3 position = transform.position;
         float distance = Mathf.Infinity;
@@ -45,25 +56,50 @@ public class SimulationBehavior : MonoBehaviour
             }
         }
         Debug.DrawLine(transform.position, exit.transform.position, Color.blue);
-        navAgent.SetDestination(exit.transform.position);
         return exit;
     }
 
-    void FindPerson()
+    public void MoveToExit()
+    {
+        if (closestPerson <= socialDistancing)
+        {
+            Debug.Log(closestPerson);
+            navAgent.isStopped = true;
+        }
+        else
+        {
+            navAgent.isStopped = false;
+        }
+
+        float dist = Vector3.Distance(exit.transform.position, transform.position);
+        Debug.Log(dist);
+        if(dist < 0.4f)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    GameObject FindPerson()
     {
         Vector3 position = transform.position;
-        float distance = Mathf.Infinity;
-
+        closestPerson = Mathf.Infinity;
         foreach (GameObject p in personTag)
         {
+            if(p == this.gameObject)
+            {
+                continue;
+            }
+
             Vector3 difference = p.transform.position - position;
             float currentDistance = difference.sqrMagnitude;
-            Debug.DrawLine(transform.position, p.transform.position, Color.red);
-            if (currentDistance < distance)
+            
+            if (currentDistance < closestPerson)
             {
-                distance = currentDistance;
+                person = p;
+                closestPerson = currentDistance;
             }
-            Debug.Log(distance / 3);
+            
         }
+        return person;
     }
 }
