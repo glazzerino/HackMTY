@@ -22,9 +22,18 @@
                 <label for="h_config" >Height: </label>
                 <textarea name="h_config" id="h_config" rows="1" cols="4" maxlength="2" resize="none"></textarea>
                 <br>
-                <button type="button" onclick="draw()">Display</button>
+                <label for="safe_distance">Minimum Safe Distance (cm)</label>
+                <textarea id="safe_distance" name="safe_distance" rows="1" cols="4" maxlength="500" resize="none"></textarea>
+                <br>
+                <label for="seat_distance" >Distance between seats' centers (cm)</label>
+                <textarea id="seat_distance" name= "seat_distance" rows="1" cols="4" maxlength="500" resize="none"> </textarea>
+                <br>
+                <button type="button" class="btn btn-dark" onclick="draw(); unityInstance.SendMessage('SpawnPersons', setSize(), Width, 0, Height)" >Display</button>
+                <br>
             </div>
-            
+            <div id="container">
+
+            </div>
         
         <button type="button" onclick="confirm_redirect()" >Confirm</button>    
 
@@ -33,4 +42,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="seats.js"></script>
+<script src="../../alg.js"></script>
 </body>
