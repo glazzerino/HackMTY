@@ -43,15 +43,9 @@ function draw() {
         for (var i=0; i<w; i++) {
             //Seat slot recoloring
             if (mat[j][i] == 'O') {
+                console.log("hi")
                 var square = document.getElementById(j+"_"+i);
-                if (i == 0) {
-                    // if near exit (upper seats)
-                    square.style.backgroundColor = "#005BD1";
-                } 
-                else {
-                    square.style.backgroundColor = "#F77F00";
-                }
-                
+                square.style.backgroundColor = "#F77F00";
             }
         }
     } 
