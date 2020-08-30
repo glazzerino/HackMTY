@@ -5,6 +5,12 @@ body {
     padding-top:4%;
 }
 
+textarea {
+    resize: none;
+    border-radius: 3px;
+    font-size: large;
+}
+
 .container {
     padding-left: 8%;
     padding-right:8%;
@@ -21,6 +27,14 @@ body {
                         "left_menu main right_menu";
 }
 
+.config_box {
+    padding-top: 2.5%;
+}
+
+.main {    
+    text-align: center;
+}
+
 .left_menu {
     grid-area: left_menu;
     background-color:#ADB5BD;
@@ -34,3 +48,8 @@ body {
     text-align: center;
 }
 
+.seat {
+    border-radius: 3px;
+    background-color: #F77F00;
+    border: none;
+}

@@ -6,16 +6,31 @@
 <body>
     <div class="container">
         <div class="left_menu">
-            <h2>Left Menu</h2>
+            <h3>Left Menu</h3>
         </div>
 
-        <div class="main">
-                
+        <div class="main" id="main">
+            <div class="config_box">
+                <label for="w_config">Width: </label>
+                <textarea  name="w_config" id="w_config" rows="1" cols="1" maxlength="2" resize="none"></textarea>
+
+                <br>
+                <label for="h_config" >Height: </label>
+                <textarea name="h_config" id="h_config" rows="1" cols="1" maxlength="2" resize="none"></textarea>
+                <br>
+                <button type="button" onclick="draw()">Display</button>
+            </div>
+
+            <div id="container">
+                <!-- Dynamic HTML goes here -->
+            </div>
         </div>
 
         <div class="right_menu">
-            <h2>Right Menu</h2>
+            <h3>Right Menu</h3>
         </div>
 
     </div>
+    
 </body>
+<script src="owner.js"></script>
