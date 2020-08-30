@@ -43,7 +43,7 @@ function draw() {
         for (var i=0; i<w; i++) {
             if (mat[j][i] == 'O') {
                 console.log("hi")
-                var square = document.getElementById(i+"_"+j);
+                var square = document.getElementById(j+"_"+i);
                 square.style.backgroundColor = "#F77F00";
             }
         }
