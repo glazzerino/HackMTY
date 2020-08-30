@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-
-var matsave = new Array;
-=======
->>>>>>> 2f90c48aedafe4ee90d58b0a84ade65a13e8af93
+var fs = require("fs");
 function draw() {
     var h_config = document.getElementById("h_config");
     var w_config = document.getElementById("w_config");
@@ -16,8 +12,10 @@ function draw() {
     var matrix_and_counter = get_plan(w,h,seat_distance,mind);
     var mat = matrix_and_counter[0];
     var counter = matrix_and_counter[1];
-    var indicator = document.createElement("p3");
+    var indicator = document.createElement("p2");
+
     indicator.textContent = "Max occupancy percentage: " + parseFloat((counter * 100) / (w*h)).toFixed(2) +"%";
+
     container.appendChild(indicator)
     var row = 0;
     for (row=0; row<h; row++) {
