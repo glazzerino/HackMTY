@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 var matsave = new Array;
+=======
+>>>>>>> 2f90c48aedafe4ee90d58b0a84ade65a13e8af93
 function draw() {
     var h_config = document.getElementById("h_config");
     var w_config = document.getElementById("w_config");
