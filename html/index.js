@@ -5,3 +5,4 @@ function owner_redirect() {
 function client_redirect() {
     window.location.replace("./client/client.html")
 }
+    
