@@ -14,7 +14,7 @@ for j in range(M):
                     if(y==j and x==i):
                         continue
                     val = ((y-j)**2+(x-i)**2)**.5 *distanciaEntreAsientos
-                    if val<150:
+                    if val<sanaDistancia:
                         res[y, x]="X"
 
 print(res)
