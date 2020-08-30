@@ -13,6 +13,7 @@ for j in range(rango):
                 for x in range(longitud):   
                     if(y==j and x==i):
                         continue
+
                     val = ((y-j)**2+(x-i)**2)**.5 *distanciaEntreAsientos
                     if val<sanaDistancia:
                         res[y, x]=" "
