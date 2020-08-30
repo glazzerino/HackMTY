@@ -1,4 +1,3 @@
-
 function draw() {
     var h_config = document.getElementById("h_config");
     var w_config = document.getElementById("w_config");
