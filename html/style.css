@@ -1,0 +1,27 @@
+body {
+    background-color: whitesmoke;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    padding-left: 8%;
+}
+
+head {
+    background-color: white;
+}
+
+.main {
+    /* width: %; */
+}
+
+button {
+    border-radius: 3px;
+    border-block-color: none;
+    border: none;
+    font-size: 200%;
+    transition-duration: 0.3s;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+}
