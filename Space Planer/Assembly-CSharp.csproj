@@ -65,9 +65,6 @@
     <Compile Include="Assets\Scripts\InputData.cs" />
     <Compile Include="Assets\Scripts\SimulationBehavior.cs" />
     <Compile Include="Assets\Scripts\SpawnPersons.cs" />
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/Dell/Desktop/Space_Planer/HackMTY/Space Planer/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>C:/Users/Dell/Desktop/Space_Planer/HackMTY/Space Planer/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
@@ -76,9 +73,6 @@
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Users/Dell/Desktop/Space_Planer/HackMTY/Space Planer/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/Dell/Desktop/Space_Planer/HackMTY/Space Planer/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>C:/Users/Dell/Desktop/Space_Planer/HackMTY/Space Planer/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
