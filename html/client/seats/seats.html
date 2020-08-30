@@ -9,6 +9,10 @@
     <link rel= "stylesheet" type="text/css" href="seats.css">
 </head>
 <body>
+            <input type="file" onchange="readFile(this)"id="file">
+            <h3>Select a save file to reserve a seat: </h3>
+            
+
 
             <div class="config_box">
                 <label for="w_config">Width: </label>
@@ -20,7 +24,8 @@
                 <br>
                 <button type="button" onclick="draw()">Display</button>
             </div>
-
+            
+        
         <button type="button" onclick="confirm_redirect()" >Confirm</button>    
 
 
