@@ -10,7 +10,12 @@
 
 <body>
 
+
         <div class="left_menu">
+            <h1 class="display-4">Choose Dimensions</h1>
+            <div class="custom-control custom-switch">
+                
+        </div>        
         </div>
 
         <div class="main" id="main">
@@ -22,20 +27,23 @@
                 <label for="h_config" >Height: </label>
                 <textarea name="h_config" id="h_config" rows="1" cols="4" maxlength="2" resize="none"></textarea>
                 <br>
-                <button type="button" onclick="draw()">Display</button>
+                <button type="button" class="btn btn-dark" onclick="draw()" >Display</button>
+                
             </div>
 
             <div id="container">
                 <!-- Dynamic HTML goes here -->
             </div>
         </div>
-
+        <br>
+        <br>
         <div class="right_menu">
-            <h3>Display Animation</h3>
+            <h1 class="display-4">Display Animation</h1>
             <div class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                
                 <!-- <label class="custom-control-label" for="customSwitch1">Handicap selection</label> -->
-                <button type="button" onclick="animate_redirect()" >Animate</button>
+                <button type="button" class="btn btn-light" onclick="animate_redirect()" >Animate</button>
+               
         </div>
     </div>
 
