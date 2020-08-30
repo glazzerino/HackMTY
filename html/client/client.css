@@ -1,15 +1,11 @@
 
+
+
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: #212529;
     color: white;
     padding-top:4%;
-}
-
-textarea {
-    resize: none;
-    border-radius: 3px;
-    font-size: large;
 }
 
 .container {
@@ -28,14 +24,6 @@ textarea {
                         "left_menu main right_menu";
 }
 
-.config_box {
-    padding-top: 2.5%;
-}
-
-.main {    
-    text-align: center;
-}
-
 .left_menu {
     grid-area: left_menu;
     background-color:#ADB5BD;
@@ -49,8 +37,3 @@ textarea {
     text-align: center;
 }
 
-.seat {
-    border-radius: 3px;
-    background-color: #F77F00;
-    border: none;
-}
