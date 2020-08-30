@@ -13,7 +13,9 @@ function draw() {
         var newrow = document.createElement("div");
         newrow.id = "row_" + row;
         newrow.style.padding="1%"
+
         for (var column=0; column<w; column++) {
+
             var square = document.createElement("button");
             square.type= "button";
             square.class = "seat";
@@ -31,4 +33,9 @@ function draw() {
         console.log(newrow);
         container.appendChild(newrow);
     }
+}
+
+
+function ianyan27(w, h) {
+    
 }

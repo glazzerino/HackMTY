@@ -7,7 +7,8 @@ function client_redirect() {
 }
     
 function userType_redirect(id){
-    if (id=="customRadio1") {
+    console.log(id)
+    if (id==true) {
         owner_redirect()
     } else {
         client_redirect()
