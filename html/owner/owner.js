@@ -4,7 +4,9 @@ function draw() {
     var w_config = document.getElementById("w_config");
     var w = w_config.value;
     var h = h_config.value;
+    var mind = document.getElementById("safe_distance").value;
     var container = document.getElementById("container");
+    var seat_distance = document.getElementById("seat_distance").value;
     container.innerHTML="";
     // console.log(h)
     var row = 0;
@@ -21,7 +23,7 @@ function draw() {
             square.class = "seat";
             // square.style.width = "5%";
             square.style.marginLeft="1%";
-            square.style.backgroundColor="#F77F00";
+            square.style.backgroundColor="white";
             square.style.padding="2%";
             square.style.borderRadius="2px";
             // square.style.border
@@ -30,11 +32,22 @@ function draw() {
             newrow.appendChild(square);
             // console.log(square);
         }
-        console.log(newrow);
+        // console.log(newrow);
         container.appendChild(newrow);
     }
-    matrix = get_plan(w,h,150,150);
-    console.log(matrix);
+    
+    var matrix_and_counter = get_plan(w,h,seat_distance,mind);
+
+    var mat = matrix_and_counter[0];
+    for (var j=0;j<h; j++) {
+        for (var i=0; i<w; i++) {
+            if (mat[j][i] == 'O') {
+                console.log("hi")
+                var square = document.getElementById(i+"_"+j);
+                square.style.backgroundColor = "#F77F00";
+            }
+        }
+    } 
 }
 
 function animate_redirect() {
