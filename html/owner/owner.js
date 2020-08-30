@@ -1,4 +1,5 @@
 
+var matsave = new Array;
 function draw() {
     var h_config = document.getElementById("h_config");
     var w_config = document.getElementById("w_config");
@@ -9,13 +10,20 @@ function draw() {
     var seat_distance = document.getElementById("seat_distance").value;
     container.innerHTML="";
 
+    var matrix_and_counter = get_plan(w,h,seat_distance,mind);
+    var mat = matrix_and_counter[0];
+    var counter = matrix_and_counter[1];
+    var indicator = document.createElement("p3");
+    indicator.textContent = "Max occupancy percentage: " + parseFloat((counter * 100) / (w*h)).toFixed(2) +"%";
+    container.appendChild(indicator)
     var row = 0;
     for (row=0; row<h; row++) {
 
         var newrow = document.createElement("div");
         newrow.id = "row_" + row;
         newrow.style.padding="1%"
-
+        var indicator = document.createElement("p3");
+        indicator.id = "indicator";
         for (var column=0; column<w; column++) {
 
             var square = document.createElement("button");
@@ -35,9 +43,9 @@ function draw() {
         container.appendChild(newrow);
     }
 
-    var matrix_and_counter = get_plan(w,h,seat_distance,mind);
+    
 
-    var mat = matrix_and_counter[0];
+    
     console.log(mat);
     for (var j=0;j<h; j++) {
         for (var i=0; i<w; i++) {
@@ -45,10 +53,21 @@ function draw() {
             if (mat[j][i] == 'O') {
                 console.log("hi")
                 var square = document.getElementById(j+"_"+i);
-                square.style.backgroundColor = "#F77F00";
+             
+                if (j == 0) {
+                var square = document.getElementById(j+"_"+i);
+                square.style.backgroundColor = "blue";
+                square.title = "Handicap seat";
+                }
+                else {
+                    square.style.backgroundColor = "#F77F00";
+                }   
             }
         }
-    } 
+    }
+    // indicator.value = "Available percentage: " + (ci)
+    matsave = mat; 
+    console.log(mat);
 }
 
 function animate_redirect() {

@@ -27,13 +27,9 @@ function get_plan(w, h,seatd, mind, percentage) {
         }
         j+=intervalo;
         i=0;
+
     }
 
-    // console.log(mat)
-    // console.log(counter)
-    // for (var j=0; j<n; j++) {
-    // console.log(mat[j])
-    // }
     return [mat,counter];
 }
 
