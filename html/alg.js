@@ -11,7 +11,7 @@ function get_plan(w, h,seatd, mind, percentage) {
     
     var seat_distance = seatd;
     var distance = mind;
-    var intervalo = Math.trunc( distance / seat_distance);
+    var intervalo = Math.trunc(distance / seat_distance);
     n = seatd;
     m = mind;
     i = 0;

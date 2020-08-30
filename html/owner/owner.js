@@ -8,7 +8,7 @@ function draw() {
     var container = document.getElementById("container");
     var seat_distance = document.getElementById("seat_distance").value;
     container.innerHTML="";
-    // console.log(h)
+
     var row = 0;
     for (row=0; row<h; row++) {
 
@@ -21,30 +21,37 @@ function draw() {
             var square = document.createElement("button");
             square.type= "button";
             square.class = "seat";
-            // square.style.width = "5%";
+
             square.style.marginLeft="1%";
             square.style.backgroundColor="white";
-            square.style.padding="2%";
+            square.style.padding="1%";
             square.style.borderRadius="2px";
-            // square.style.border
+
             square.id = row +"_"+ column;
             square.style.border="none";
             newrow.appendChild(square);
-            // console.log(square);
+           
         }
-        // console.log(newrow);
         container.appendChild(newrow);
     }
-    
+
     var matrix_and_counter = get_plan(w,h,seat_distance,mind);
 
     var mat = matrix_and_counter[0];
+    console.log(mat);
     for (var j=0;j<h; j++) {
         for (var i=0; i<w; i++) {
+            //Seat slot recoloring
             if (mat[j][i] == 'O') {
-                console.log("hi")
-                var square = document.getElementById(i+"_"+j);
-                square.style.backgroundColor = "#F77F00";
+                var square = document.getElementById(j+"_"+i);
+                if (i == 0) {
+                    // if near exit (upper seats)
+                    square.style.backgroundColor = "#005BD1";
+                } 
+                else {
+                    square.style.backgroundColor = "#F77F00";
+                }
+                
             }
         }
     } 
