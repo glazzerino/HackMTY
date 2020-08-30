@@ -35,7 +35,6 @@ function draw() {
     }
 }
 
-
-function ianyan27(w, h) {
-    
+function animate_redirect() {
+    window.location.replace("./animation/animation.html")
 }

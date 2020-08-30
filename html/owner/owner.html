@@ -3,26 +3,24 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
     <link rel= "stylesheet" type="text/css" href="owner.css">
 </head>
+
 <body>
-    <div class="container">
+
         <div class="left_menu">
-            <h3>Left Menu</h3>
         </div>
 
         <div class="main" id="main">
             <div class="config_box">
                 <label for="w_config">Width: </label>
-                <textarea  name="w_config" id="w_config" rows="1" cols="1" maxlength="2" resize="none"></textarea>
+                <textarea  name="w_config" id="w_config" rows="1" cols="4" maxlength="2" resize="none"></textarea>
 
                 <br>
                 <label for="h_config" >Height: </label>
-                <textarea name="h_config" id="h_config" rows="1" cols="1" maxlength="2" resize="none"></textarea>
+                <textarea name="h_config" id="h_config" rows="1" cols="4" maxlength="2" resize="none"></textarea>
                 <br>
                 <button type="button" onclick="draw()">Display</button>
             </div>
@@ -33,15 +31,16 @@
         </div>
 
         <div class="right_menu">
-            <h3>Right Menu</h3>
+            <h3>Display Animation</h3>
             <div class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                <label class="custom-control-label" for="customSwitch1">Handicap selection</label>
-            </div>
+                <!-- <label class="custom-control-label" for="customSwitch1">Handicap selection</label> -->
+                <button type="button" onclick="animate_redirect()" >Animate</button>
+        </div>
     </div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="owner.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="owner.js"></script>
 </body>
