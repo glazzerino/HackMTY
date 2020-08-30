@@ -33,6 +33,8 @@ function draw() {
         console.log(newrow);
         container.appendChild(newrow);
     }
+    matrix = get_plan(w,h,150,150);
+    console.log(matrix);
 }
 
 function animate_redirect() {
